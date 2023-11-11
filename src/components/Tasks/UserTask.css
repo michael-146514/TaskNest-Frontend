@@ -1,0 +1,19 @@
+/* TODO: Fix CSS to make it look WAY better */
+
+.user-task {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  cursor: grab;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+.user-task:hover {
+  border-color: #666;
+}
+
+.user-task:active {
+  cursor: grabbing;
+  transform: scale(1.1);
+}

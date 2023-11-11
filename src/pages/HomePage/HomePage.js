@@ -2,14 +2,20 @@ import React from "react";
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
-
+import UserBoards from "../../components/Boards/UserBoards";
 // Components
-import Boards from "../../components/Boards/Boards";
 
 const HomePage = () => {
   const [user, token] = useAuth();
+  const [Boards, Setboards] = useState([]);
 
-  const GetUserBoards = async () => {};
+  const GetUserBoards = async () => {
+    try {
+      const response = await axios.get("https://localhost:5001/api/");
+    } catch (error) {
+      console.warn(`Error in GetUserBoards: `, error);
+    }
+  };
   useEffect(() => {}, [token]);
 
   return (
@@ -19,7 +25,7 @@ const HomePage = () => {
         <button>Calendar</button>
       </div>
       <div>
-        <Boards />
+        <UserBoards />
       </div>
     </div>
   );

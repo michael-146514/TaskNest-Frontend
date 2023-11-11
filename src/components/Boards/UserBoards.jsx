@@ -1,4 +1,4 @@
-const Boards = ({}) => {
+const UserBoards = ({}) => {
   return (
     <div>
       <button>Name</button>
@@ -6,4 +6,4 @@ const Boards = ({}) => {
   );
 };
 
-export default Boards;
+export default UserBoards;

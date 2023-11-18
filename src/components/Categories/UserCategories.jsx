@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import UserTask from "../Tasks/UserTask";
+import NewTaskForm from "../NewTaskForm/NewTaskForm";
 
 const UserCategories = () => {
   const initialTasks = [
@@ -27,6 +28,8 @@ const UserCategories = () => {
     setTasks(newTasks);
   };
 
+  const CreateTask = async () => {};
+
   const handleDragOver = (e) => {
     e.preventDefault();
   };
@@ -44,6 +47,10 @@ const UserCategories = () => {
             <UserTask taskName={task} onDragStart={handleDragStart(index)} />
           </div>
         ))}
+      </div>
+      <div>
+        <button>Create Task</button>
+        <NewTaskForm />
       </div>
     </div>
   );

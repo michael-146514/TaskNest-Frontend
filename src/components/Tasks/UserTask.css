@@ -15,5 +15,5 @@
 
 .user-task:active {
   cursor: grabbing;
-  transform: scale(1.1);
+  transform: scale(1);
 }
